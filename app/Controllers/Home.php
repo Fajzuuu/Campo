@@ -42,4 +42,22 @@ class Home extends BaseController
         
         return view('pages/detail', $data);
     }
+    public function pembayaran()
+    {
+        $data = [
+            'title' => 'CAMPO - Detail Pembayaran',
+            'uri'   => service('uri')->getSegment(1)
+        ];
+        
+        return view('pages/pembayaran', $data);
+    }
+    public function tiket()
+    {
+        $data = [
+            'title' => 'CAMPO - Tiket Berhasil',
+            'uri'   => service('uri')->getSegment(1)
+        ];
+        
+        return view('pages/tiket', $data);
+    }
 }

@@ -134,7 +134,7 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/1200x/07/83/be/0783bea569937befccb7b6f1a9ca7905.jpg" alt="Arena Futsal">
+                    <img src="gambar/lap a futsal.png" alt="">
                     <div class="card-body">
                         <span class="sport-badge badge-futsal">Futsal</span>
                         <h5 class="mt-2 fw-bold">Lapangan A</h5>
@@ -150,7 +150,7 @@
 
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/736x/2e/59/e7/2e59e7b35c0f0b442299260081c508b8.jpg" alt="GOR Pelita">
+                    <img src="gambar/lap b futsal.png" alt="GOR Pelita">
                     <div class="card-body">
                         <span class="sport-badge badge-futsal">Futsal</span>
                         <h5 class="mt-2 fw-bold">Lapangan B</h5>
@@ -166,7 +166,7 @@
 
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/1200x/6d/38/5d/6d385d010d7e5006312c8fbaeacdb3a1.jpg" alt="Stadion Madya">
+                    <img src="gambar/lap c futsal.png" alt="Stadion Madya">
                     <div class="card-body">
                         <span class="sport-badge badge-futsal">Futsal</span>
                         <h5 class="mt-2 fw-bold">Lapangan C</h5>
@@ -182,7 +182,7 @@
 
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/736x/f9/58/79/f95879815185a101ca64c5db17c6ac1e.jpg" alt="Future Arena">
+                    <img src="gambar/lap a badminton.png" alt="Future Arena">
                     <div class="card-body">
                         <span class="sport-badge badge-badminton">Bulutangkis</span>
                         <h5 class="mt-2 fw-bold">Lapangan A</h5>
@@ -198,7 +198,7 @@
 
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/736x/d9/5e/b8/d95eb846af089b44018ce1ef10fef97c.jpg" alt="Badminton Hall">
+                    <img src="gambar/lap b badminton.png" alt="Badminton Hall">
                     <div class="card-body">
                         <span class="sport-badge badge-badminton">Bulutangkis</span>
                         <h5 class="mt-2 fw-bold">Lapangan B</h5>
@@ -214,7 +214,7 @@
 
             <div class="col-md-4">
                 <div class="card venue-card">
-                    <img src="https://i.pinimg.com/736x/12/96/a7/1296a704c9acdaa7790931323112afef.jpg" alt="Sport Center">
+                    <img src="gambar/lap c badminton.png" alt="Sport Center">
                     <div class="card-body">
                         <span class="sport-badge badge-badminton">Bulutangkis</span>
                         <h5 class="mt-2 fw-bold">Lapangan C</h5>

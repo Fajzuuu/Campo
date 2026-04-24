@@ -72,10 +72,10 @@
 <div class="container mt-4 mb-5">
     <div class="row g-3 mb-5">
         <div class="col-md-7">
-            <img src="https://images.unsplash.com/photo-1626245027680-80ae0d0f7207?auto=format&fit=crop&w=800&q=80" alt="Lapangan 1" class="gallery-main">
+            <img src="gambar/lap a futsal.png" alt="Lapangan A" class="gallery-main">
         </div>
         <div class="col-md-5">
-            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80" alt="Lapangan 2" class="gallery-sub">
+            <img src="gambar/lap b futsal.png" alt="Lapangan B" class="gallery-sub">
         </div>
     </div>
 
@@ -83,7 +83,7 @@
         <div class="col-lg-8 pe-lg-4">
             
             <h2 class="fw-bold mb-1">GOR Semarang</h2>
-            <h5 class="text-secondary mb-3">Lapangan 1</h5>
+            <h5 class="text-secondary mb-3">Lapangan A</h5>
             <div class="d-flex align-items-center mb-2">
                 <span class="fw-bold me-2">4.50</span>
                 <i class="bi bi-star-fill text-warning me-2"></i>
@@ -127,11 +127,11 @@
             <div class="card court-card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=400&q=80" class="court-img" alt="Lapangan A">
+                        <img src="gambar/lap b futsal.png" class="court-img" alt="Lapangan B">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h6 class="fw-bold">Lapangan A</h6>
+                            <h6 class="fw-bold">Lapangan B</h6>
                             <p class="text-muted small mb-2">Depan Pintu Masuk</p>
                             <div class="mb-3 text-muted small">
                                 <div><i class="bi bi-geo-alt me-2"></i> Indoor</div>
@@ -146,11 +146,11 @@
             <div class="card court-card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=400&q=80" class="court-img" alt="Lapangan B">
+                        <img src="gambar/lap c futsal.png" class="court-img" alt="Lapangan C">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h6 class="fw-bold">Lapangan B</h6>
+                            <h6 class="fw-bold">Lapangan C</h6>
                             <p class="text-muted small mb-2">Depan Pintu Masuk</p>
                             <div class="mb-3 text-muted small">
                                 <div><i class="bi bi-geo-alt me-2"></i> Indoor</div>
@@ -225,7 +225,7 @@
             <div class="booking-card p-4">
                 <p class="text-muted small mb-1">Mulai dari</p>
                 <h4 class="fw-bold mb-4">Rp. 45,000 <span class="text-muted small fw-normal">/ jam</span></h4>
-                <button class="btn btn-booking w-100">Booking</button>
+                <a href="<?= base_url('pembayaran') ?>" class="btn btn-booking w-100 d-block text-center text-decoration-none">Booking</a>
             </div>
         </div>
     </div>
