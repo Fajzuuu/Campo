@@ -1,5 +1,4 @@
 <?= $this->extend('layout/template'); ?>
-
 <?= $this->section('content'); ?>
 
 <style>
@@ -44,7 +43,7 @@
     }
 
     .search-section {
-        background: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+        background: url('gambar/ring basket.png') no-repeat center center;
         background-size: cover;
         padding: 60px 0;
         position: relative;
@@ -80,31 +79,46 @@
 
 <section class="search-section">
     <div class="search-overlay"></div>
-    <div class="container search-content text-white text-center">
+    <div class="container search-content text-white text-center">      
         
         <form action="<?= base_url('proses_pencarian') ?>" method="POST" class="row justify-content-center g-3">
-            <div class="col-md-3">
-                <div class="input-group">
-                    <span class="input-group-text bg-white border-end-0">❯</span>
-                    <select class="form-select border-start-0 ps-0" name="jenis_olahraga" required>
-                        <option value="" selected disabled>pilih olahraga</option>
-                        <option value="bulutangkis">Bulutangkis</option>
-                        <option value="futsal">Futsal</option>
-                    </select>
-                </div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">❯</span>
+                <select class="form-select border-start-0 ps-0" name="jenis_olahraga" required>
+                    <option value="" selected disabled>pilih olahraga</option>
+                    <option value="bulutangkis">Bulutangkis</option>
+                    <option value="futsal">Futsal</option>
+                </select>
             </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">❯</span>
+                <input type="date" class="form-control border-start-0 ps-0" name="tanggal_main" required placeholder="pilih tanggal" 
+                    min="<?= date('Y-m-d') ?>" max="<?= date('Y-m-d', strtotime('+14 days')) ?>">
+            </div>
+        </div>
 
-            <div class="col-md-3">
-                <div class="input-group">
-                    <span class="input-group-text bg-white border-end-0">❯</span>
-                    <input type="date" class="form-control border-start-0 ps-0" name="tanggal_main" required placeholder="pilih tanggal">
-                </div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">❯</span>
+                <select class="form-select border-start-0 ps-0" name="jam_main" required>
+                    <option value="" selected disabled>pilih jam</option>
+                    <option value="08:00">08:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
             </div>
-
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-temukan rounded-3">Temukan</button>
-            </div>
-        </form>
+        </div>
+        <div class="col-md-4 mt-4">
+            <button type="submit" class="btn btn-temukan rounded-3 w-100 py-2 fs-5">Temukan</button>
+        </div>
+    </form>
     </div>
 </section>
 

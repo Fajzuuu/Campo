@@ -20,7 +20,7 @@
     .login-image-section {
         flex: 1 1 50%;
         /* Link gambar sudah kuperbarui ke link barumu dan dikembalikan sebagai background agar responsif */
-        background: url('https://i.pinimg.com/736x/45/b0/e0/45b0e05edc2b378d1522fd57a63f1fb6.jpg') no-repeat center center;
+        background: url('gambar/kucing raket.png') no-repeat center center;
         background-size: cover;
     }
 

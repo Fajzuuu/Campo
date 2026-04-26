@@ -1,18 +1,13 @@
 <?php
-
 namespace App\Controllers;
-
 class Home extends BaseController
 {
     public function index()
     {
-        // Data yang dikirim ke view (termasuk deteksi URL untuk Navbar aktif)
         $data = [
             'title' => 'CAMPO - Beranda',
-            'uri'   => service('uri')->getSegment(1) // Mengambil nama rute dari URL
+            'uri'   => service('uri')->getSegment(1)
         ];
-        
-        // Memanggil file app/Views/pages/beranda.php
         return view('pages/beranda', $data);
     }
     public function venue()
@@ -20,8 +15,7 @@ class Home extends BaseController
         $data = [
             'title' => 'CAMPO - Daftar Venue',
             'uri'   => service('uri')->getSegment(1)
-        ];
-        
+        ];      
         return view('pages/venue', $data);
     }
     public function masuk()
@@ -29,8 +23,7 @@ class Home extends BaseController
         $data = [
             'title' => 'CAMPO - Masuk',
             'uri'   => service('uri')->getSegment(1)
-        ];
-        
+        ];       
         return view('pages/masuk', $data);
     }
     public function detail()
@@ -38,8 +31,7 @@ class Home extends BaseController
         $data = [
             'title' => 'CAMPO - Detail Venue',
             'uri'   => service('uri')->getSegment(1)
-        ];
-        
+        ];        
         return view('pages/detail', $data);
     }
     public function pembayaran()
@@ -47,8 +39,7 @@ class Home extends BaseController
         $data = [
             'title' => 'CAMPO - Detail Pembayaran',
             'uri'   => service('uri')->getSegment(1)
-        ];
-        
+        ];        
         return view('pages/pembayaran', $data);
     }
     public function tiket()
@@ -56,8 +47,7 @@ class Home extends BaseController
         $data = [
             'title' => 'CAMPO - Tiket Berhasil',
             'uri'   => service('uri')->getSegment(1)
-        ];
-        
+        ];       
         return view('pages/tiket', $data);
     }
 }

@@ -22,8 +22,10 @@ if(uri_string()!=""){
             padding: 0.5rem 0;
         }
         .navbar-custom .navbar-brand img {
-            width: 120px;
-            height: 60px;
+            height: 35px;
+            width: auto; 
+            object-fit: contain;
+            margin-right: 8px;
         }
         .nav-link, .navbar-brand {
             color: #333 !important;
@@ -39,9 +41,9 @@ if(uri_string()!=""){
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="<?= base_url('/') ?>">
-                <img src="<?= base_url('logo campo.png') ?>" alt="Logo Campo" class="me-2" onerror="this.src='https://ui-avatars.com/api/?name=C&background=random&color=fff&rounded=true'; this.style.width='40px'; this.style.height='40px';">
-                campo
-            </a>
+                <img src="<?= base_url('gambar/campo logo.png') ?>" alt="Logo Campo">
+                <img src="<?= base_url('gambar/campo teks.png') ?>" alt="Campo" width="5px">
+            </a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
