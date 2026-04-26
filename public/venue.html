@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue - CAMPO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar */
+        .navbar-custom {
+            background-color: #82c4f5;
+            padding: 0.5rem 0;
+        }
+        .navbar-custom .navbar-brand img {
+            width: 120px;
+            height: 60px;
+        }
+        .nav-link, .navbar-brand {
+            color: #333 !important;
+            font-weight: bold;
+        }
+        .nav-link.active {
+            color: #000 !important;
+        }
+
+        /* Form Pencarian */
+        .search-section {
+            background: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .search-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, #0d6efd 10%, rgba(13, 110, 253, 0.4) 100%);
+        }
+
+        .search-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-temukan {
+            background-color: #0b1a30;
+            color: #fff;
+            font-weight: bold;
+            width: 100%;
+            padding: 10px;
+        }
+        .btn-temukan:hover {
+            background-color: #163057;
+            color: #fff;
+        }
+
+        /* Venue Section */
+        .venue-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .venue-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .venue-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .venue-card img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .sport-badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .badge-futsal { background-color: #58a75e; color: #fff; }
+        .badge-badminton { background-color: #dc3545; color: #fff; }
+
+        .venue-location {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .venue-rating {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .venue-price {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn-pesan {
+            background-color: #0d6efd;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+        }
+
+        .btn-pesan:hover {
+            background-color: #0b5ed7;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo campo.png" alt="Logo Campo" class="me-2">
+                campo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="venue.html">Venue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="masuk.html">Masuk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="daftar.html">Daftar</a></li>
+                    <li class="nav-item ms-3 text-center">
+                        <img src="https://ui-avatars.com/api/?name=Mawar&background=fff&color=000&rounded=true" alt="Mawar" width="35" height="35" class="rounded-circle">
+                        <div style="font-size: 0.8rem; font-weight: bold; margin-top: 2px;">Mawar</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="search-section">
+        <div class="search-overlay"></div>
+        <div class="container search-content text-white text-center">
+            <h2 class="mb-4 fw-bold">Pilih lapangan mu sekarang</h2>
+
+            <form action="#" method="POST" class="row justify-content-center g-3">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0">❯</span>
+                        <select class="form-select border-start-0 ps-0" name="jenis_olahraga" required>
+                            <option value="" selected disabled>pilih olahraga</option>
+                            <option value="bulutangkis">Bulutangkis</option>
+                            <option value="futsal">Futsal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0">❯</span>
+                        <input type="date" class="form-control border-start-0 ps-0" name="tanggal_main" required placeholder="pilih tanggal">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-temukan rounded-3">Temukan</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <section class="venue-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Pilih Venue</h2>
+
+            <div class="row g-4">
+                <!-- Venue 1 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/1200x/07/83/be/0783bea569937befccb7b6f1a9ca7905.jpg" alt="Arena Futsal">
+                        <div class="card-body">
+                            <span class="sport-badge badge-futsal">Futsal</span>
+                            <h5 class="mt-2 fw-bold">Lapangan A</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.8 (120)</span>
+                                <span class="venue-price">Rp 90.000</span>
+                            </div>
+                            <a href="detail-venue.html" class="btn btn-pesan w-100 mt-3 d-block text-decoration-none">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 2 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/736x/2e/59/e7/2e59e7b35c0f0b442299260081c508b8.jpg" alt="GOR Pelita">
+                        <div class="card-body">
+                            <span class="sport-badge badge-futsal">Futsal</span>
+                            <h5 class="mt-2 fw-bold">Lapangan B</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.5 (85)</span>
+                                <span class="venue-price">Rp 90.000</span>
+                            </div>
+                            <button class="btn btn-pesan w-100 mt-3">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 3 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/1200x/6d/38/5d/6d385d010d7e5006312c8fbaeacdb3a1.jpg" alt="Stadion Madya">
+                        <div class="card-body">
+                            <span class="sport-badge badge-futsal">Futsal</span>
+                            <h5 class="mt-2 fw-bold">Lapangan C</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.9 (70)</span>
+                                <span class="venue-price">Rp 90.000</span>
+                            </div>
+                            <button class="btn btn-pesan w-100 mt-3">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 4 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/736x/f9/58/79/f95879815185a101ca64c5db17c6ac1e.jpg" alt="Future Arena">
+                        <div class="card-body">
+                            <span class="sport-badge badge-badminton">Bulutangkis</span>
+                            <h5 class="mt-2 fw-bold">Lapangan A</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.7 (95)</span>
+                                <span class="venue-price">Rp 70.000</span>
+                            </div>
+                            <button class="btn btn-pesan w-100 mt-3">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 5 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/736x/d9/5e/b8/d95eb846af089b44018ce1ef10fef97c.jpg" alt="Badminton Hall">
+                        <div class="card-body">
+                            <span class="sport-badge badge-badminton">Bulutangkis</span>
+                            <h5 class="mt-2 fw-bold">Lapangan B</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.6 (150)</span>
+                                <span class="venue-price">Rp 50.000</span>
+                            </div>
+                            <button class="btn btn-pesan w-100 mt-3">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 6 -->
+                <div class="col-md-4">
+                    <div class="card venue-card">
+                        <img src="https://i.pinimg.com/736x/12/96/a7/1296a704c9acdaa7790931323112afef.jpg" alt="Sport Center">
+                        <div class="card-body">
+                            <span class="sport-badge badge-badminton">Bulutangkis</span>
+                            <h5 class="mt-2 fw-bold">Lapangan C</h5>
+                            <p class="venue-location">GOR Semarang jln Imam Bonjol/p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="venue-rating">★ 4.4 (70)</span>
+                                <span class="venue-price">Rp 35.000</span>
+                            </div>
+                            <button class="btn btn-pesan w-100 mt-3">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
