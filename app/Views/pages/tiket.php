@@ -1,5 +1,4 @@
 <?= $this->extend('layout/template'); ?>
-
 <?= $this->section('content'); ?>
 
 <style>
@@ -101,22 +100,29 @@
         <div class="row">
             <div class="col-md-6 ticket-divider pe-md-4">
                 <span class="ticket-label">Ticket ID</span>
-                <div class="ticket-value">01200034399434</div>
+                <div class="ticket-value"><?= esc($tiket['kode_tiket']); ?></div>
 
                 <span class="ticket-label">Date & Time</span>
-                <div class="ticket-value">2 OKTOBER 2026</div>
+                <div class="ticket-value">
+                    <?= date('d F Y', strtotime($tiket['tanggal_main'])); ?>
+                </div>
 
                 <span class="ticket-label">Price</span>
-                <div class="ticket-value mb-0">Rp 90.000</div>
+                <div class="ticket-value mb-0">
+                    Rp <?= number_format($tiket['harga'], 0, ',', '.'); ?>
+                </div>
             </div>
 
             <div class="col-md-6 ps-md-4">
                 <div class="barcode-section text-center">
                     <span class="text-muted fw-bold">Please Scan</span>
                     
-                    <img src="https://barcode.tec-it.com/barcode.ashx?data=01200034399434&code=Code128&translate-esc=on" alt="Barcode" class="barcode-img">
+                    <img src="https://barcode.tec-it.com/barcode.ashx?data=<?= esc($tiket['kode_tiket']); ?>&code=Code128&translate-esc=on" alt="Barcode" class="barcode-img">
                     
-                    <span class="text-dark small">08.00 WIB - 11.00 WIB</span>
+                    <span class="text-dark small">
+                        <?= date('H.i', strtotime($tiket['jam_mulai'])); ?> WIB - 
+                        <?= date('H.i', strtotime($tiket['jam_selesai'])); ?> WIB
+                    </span>
                 </div>
             </div>
         </div>

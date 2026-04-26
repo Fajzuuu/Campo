@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\Models\TiketModel;
 class Home extends BaseController
 {
     public function index()
@@ -44,9 +45,12 @@ class Home extends BaseController
     }
     public function tiket()
     {
+        $tiketModel = new TiketModel();
+        $dataTiket = $tiketModel->getTiketByKode('01200011');
         $data = [
             'title' => 'CAMPO - Tiket Berhasil',
-            'uri'   => service('uri')->getSegment(1)
+            'uri'   => service('uri')->getSegment(1),
+            'tiket' => $dataTiket
         ];       
         return view('pages/tiket', $data);
     }
