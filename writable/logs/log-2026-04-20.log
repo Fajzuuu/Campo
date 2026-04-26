@@ -1,0 +1,15 @@
+CRITICAL - 2026-04-20 07:01:04 --> ErrorException: Undefined variable $hlm
+[Method: GET, Route: venue]
+in APPPATH\Views\pages\venue.php on line 99.
+ 1 APPPATH\Views\pages\venue.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hlm', 'D:\\PWL SEM 4\\Project-PWL\\app\\Views\\pages\\venue.php', 99)
+ 2 SYSTEMPATH\View\View.php(240): include('D:\\PWL SEM 4\\Project-PWL\\app\\Views\\pages\\venue.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('pages/venue', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('pages/venue', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->venue()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\PWL SEM 4\\Project-PWL\\public\\index.php')
